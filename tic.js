@@ -1,14 +1,10 @@
 const pla = ()=>{ 
-    var ayme = document.getElementById("myAduio")
-    var isPlaying = false;
-    if (isPlaying) {
-        ayme.pause();
-        ay.innerText = "play music";
-    }
-    else{
-        ayme.play();
-        ay.innerText = "pause music";
-    }
+    var ayme = document.getElementById("myAduio");
+    ayme.play();
+}
+const sto = ()=>{ 
+    var ayme = document.getElementById("myAduio");
+    ayme.pause();
 }
 let ones = document.getElementById("one");
 let twos = document.getElementById("two");
@@ -39,6 +35,8 @@ const starts = ()=>{
 }
 
 let ini = "X";
+let s1 = parseInt(0);
+let d1 = parseInt(0)
 const sa = (e)=>{
     if (player1.value != "" && player2.value != ""){
         if (ini == "X" &&  e.target.innerText == "") {
@@ -59,26 +57,21 @@ const sa = (e)=>{
         let j = nines.innerHTML;
         // check winning
         if ((a == "X" && b == "X" && c == "X") || (d == "X" && f == "X" && g == "X") || (h == "X" && i == "X" && j == "X") || (a == "X" && d == "X" && h == "X") || (b == "X" && f == "X" && i == "X") || (c == "X" && g == "X" && j == "X") || (a == "X" && f == "X" && j == "X") || (c == "X" && f == "X" && h == "X")) {
-            let p1=0;
-            p1 = 0 + 1;
-            display.innerText = `${player1.value} you win this round`
+            display.innerText = `${player1.value} win this round`
             ini = "";
-            playr11.innerHTML = p2;
-            resect();
+            s1 = s1+1;
+            scor1.innerHTML=s1;
         }else if ((a == "O" && b == "O" && c == "O") || (d == "O" && f == "O" && g == "O") || (h == "O" && i == "O" && j == "O") || (a == "O" && d == "O" && h == "O") || (b == "O" && f == "O" && i == "O") || (c == "O" && g == "O" && j == "O") || (a == "O" && f == "O" && j == "O") || (c == "O" && f == "O" && h == "O")) {
-            display.innerText = `${player2.value} you win this round`;
-            let p2=0;
-            p2 = 0 + 1;
+            display.innerText = `${player2.value} win this round`;
             ini = "";
-            playr22.innerHTML = p2;
-
+            d1 = d1+1;
+            scor2.innerHTML=d1;
         }
     }else{
         ready.innerText = "Please provide your name"
     }
 }
 const resect = ()=>{
-    // disable after winning
     ini = "X";
     ones.innerHTML = "";
     twos.innerHTML  = "";
