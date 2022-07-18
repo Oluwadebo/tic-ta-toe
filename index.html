@@ -4,46 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <title>TIC TAC TO</title>
-    <style>
+    <!-- <style>
         @media only screen and (max-width: 600px){
             body{
                 height: 95vh;
             }
         }
-    </style>
+    </style> -->
 </head>
 <body style="background-image: url('children-s-colourful-magnetic-designer-education-background-brain-kids-games-flat-lay-empty-space-children-s-colourful-magnetic-169889190.jpg');background-size:cover;background-repeat:no-repeat;">
-    <center>
-        <h1>Tic Tac To <button onclick="pla()" id="ay" style="padding: 5px 10px;font-size:30px;">play music</button></h1>
-        <audio id="myAduio" src="Teni_-_Hustle_Mp3bullet.ng.mp3" loop></audio>
-        <input type="text" placeholder="Enter your name player" style="padding: 10px;" id="player1"> <small id="playr1"></small><br><br>
-        <input type="text" placeholder="Enter your name player" style="padding: 10px;" id="player2"> <small id="playr2"></small><br><br>
-        <button onclick="starts()">START</button> <button onclick="restarts()">RESTART</button>
-        <p id="ready"></p>
-        <p id="display"></p>
-        <p id="playr11"></p>
-        <p id="playr22"></p>
-    </center>
-    <table align="center" border="1">
-        <tr>
-            <td onclick="sa(event)" id="one" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
-            <td onclick="sa(event)" id="two" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
-            <td onclick="sa(event)" id="three" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
-        </tr>
-        <tr>
-            <td onclick="sa(event)" id="four" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
-            <td onclick="sa(event)" id="five" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
-            <td onclick="sa(event)" id="six" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
-        </tr>
-        <tr>
-            <td onclick="sa(event)" id="seven" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
-            <td onclick="sa(event)" id="eight" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
-            <td onclick="sa(event)" id="nine" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
-        </tr>
-    </table>
+
+    <div class="container">
+        
+        <center>
+            <h1>Tic Tac Toe <button onclick="pla()" id="ay" class="btn btn-light col-3 col-md-1 px-2">play music</button></h1>
+            <audio id="myAduio" src="Teni_-_Hustle_Mp3bullet.ng.mp3" loop></audio>
+            <p id="ready"></p>
+            <p id="display"></p>
+            <p id="playr11"></p>
+            <p id="playr22"></p>
+        </center>
+        <div class="container my-2 my-md-5">
+            <div class="row">
+                <div class="col-12 col-md-4 my-2">
+                    <input type="text" class="form-control my-3" placeholder="Enter your name player" id="player1"><small id="playr1"></small>
+                    <input type="text" class="form-control my-3" placeholder="Enter your name player" id="player2"> <small id="playr2"></small>
+                    <button onclick="starts()" class="btn btn-primary col-12 my-2">START</button>
+                    <button onclick="resect()" class="btn btn-primary col-12 my-2">CONTINUE</button>
+                    <button onclick="restarts()" class="btn btn-primary col-12 my-2">RESTART</button>
+                </div>
+                <div class="col-12 col-md-4 my-2">
+                    <table align="center" border="1">
+                        <tr>
+                            <td onclick="sa(event)" id="one" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
+                            <td onclick="sa(event)" id="two" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
+                            <td onclick="sa(event)" id="three" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
+                        </tr>
+                        <tr>
+                            <td onclick="sa(event)" id="four" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
+                            <td onclick="sa(event)" id="five" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
+                            <td onclick="sa(event)" id="six" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
+                        </tr>
+                        <tr>
+                            <td onclick="sa(event)" id="seven" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
+                            <td onclick="sa(event)" id="eight" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
+                            <td onclick="sa(event)" id="nine" style="height:110px;width:110px;text-align:center;font-size:80px;"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="row">
+                        <div class="col-12 my-3">
+                            <h3>NAME<small class="mx-5">ID</small><small class="pl-5">SCORE</small></h3>
+                        </div>
+                        <div class="col-12 my-3">
+                            <div class="row my-2">
+                                <div class="col-4">
+                                    <h3 id="nam1"></h3>
+                                </div>
+                                <div class="col-4">
+                                    <h3>X</h3>
+                                </div>
+                                <div class="col-4">
+                                    <h3 id="scor1">0</h3>
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col-4">
+                                    <h3 id="nam2"></h3>
+                                </div>
+                                <div class="col-4">
+                                    <h3>O</h3>
+                                </div>
+                                <div class="col-4">
+                                    <h3 id="scor1">0</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 
     <script src="tic.js"></script>
+    <script src="bootstrap-4.3.1-dist/js/jquery-slim.min.js"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     
 </body>
 </html>
