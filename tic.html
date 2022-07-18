@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TO</title>
+    <style>
+        @media only screen and (max-width: 600px){
+            body{
+                height: 95vh;
+            }
+        }
+    </style>
+</head>
+<body style="background-image: url('children-s-colourful-magnetic-designer-education-background-brain-kids-games-flat-lay-empty-space-children-s-colourful-magnetic-169889190.jpg');background-size:cover;background-repeat:no-repeat;">
+    <center>
+        <h1>Tic Tac To <button onclick="pla()" id="ay">play music</button> </h1>
+        <input type="text" placeholder="Player 1">
+        <div id="display"></div>
+    </center>
+    <table align="center" border="1">
+        <tr>
+            <td onclick="sa(event)" id="one" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="two" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="three" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
+        </tr>
+        <tr>
+            <td onclick="sa(event)" id="four" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="five" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="six" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
+        </tr>
+        <tr>
+            <td onclick="sa(event)" id="seven" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="eight" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="nine" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
+        </tr>
+    </table>
+
+    <script src="tic.js"></script>
+</body>
+</html>
