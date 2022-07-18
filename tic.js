@@ -8,21 +8,21 @@ let sevens = document.getElementById("seven");
 let eights = document.getElementById("eight");
 let nines = document.getElementById("nine");
 
-
+const sto = ()=>{ 
+    var ayme = document.getElementById("myAduio")
+        ayme.pause();
+}
 const pla = ()=>{ 
     var ayme = document.getElementById("myAduio")
-    var isPlaying = false;
-    if (isPlaying) {
-        ayme.pause();
-        ay.innerText = "play music";
-    }
-    else{
-        ayme.play();
-        ay.innerText = "pause music";
-    }
-    isPlaying = true;
+    ayme.play();
 }
 let ini = "X";
+const restarts = ()=>{
+    let anser = confirm('Are you sure u want to restart');
+    if (anser === true) {
+        location.reload();
+    }
+}
 const starts = ()=>{
     if (player1.value != "" && player2.value != "") {
         playr1.innerText = `${player1.value} you are player 1`
