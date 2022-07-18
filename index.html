@@ -15,25 +15,28 @@
 </head>
 <body style="background-image: url('children-s-colourful-magnetic-designer-education-background-brain-kids-games-flat-lay-empty-space-children-s-colourful-magnetic-169889190.jpg');background-size:cover;background-repeat:no-repeat;">
     <center>
-        <h1>Tic Tac To <button onclick="pla()" id="ay">play music</button> </h1>
-        <input type="text" placeholder="Player 1">
+        <h1>Tic Tac To <button onclick="pla()" id="ay" style="padding: 5px 10px;font-size:30px;">play music</button> </h1>
+        <input type="text" placeholder="Enter your name player" style="padding: 5px;" id="player1"> <small id="playr1"></small><br><br>
+        <input type="text" placeholder="Enter your name player" style="padding: 5px;" id="player2"> <small id="playr2"></small><br><br>
+        <button onclick="starts()">START</button>
+        <p id="ready"></p>
         <div id="display"></div>
     </center>
     <table align="center" border="1">
         <tr>
-            <td onclick="sa(event)" id="one" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
-            <td onclick="sa(event)" id="two" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
-            <td onclick="sa(event)" id="three" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="one" style="height:120px;width:120px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="two" style="height:120px;width:120px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="three" style="height:120px;width:120px;text-align:center;font-size:80px;"></td>
         </tr>
         <tr>
-            <td onclick="sa(event)" id="four" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
-            <td onclick="sa(event)" id="five" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
-            <td onclick="sa(event)" id="six" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="four" style="height:120px;width:120px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="five" style="height:120px;width:120px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="six" style="height:120px;width:120px;text-align:center;font-size:80px;"></td>
         </tr>
         <tr>
-            <td onclick="sa(event)" id="seven" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
-            <td onclick="sa(event)" id="eight" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
-            <td onclick="sa(event)" id="nine" style="height:130px;width:130px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="seven" style="height:120px;width:120px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="eight" style="height:120px;width:120px;text-align:center;font-size:80px;"></td>
+            <td onclick="sa(event)" id="nine" style="height:120px;width:130px;text-align:center;font-size:80px;"></td>
         </tr>
     </table>
 
