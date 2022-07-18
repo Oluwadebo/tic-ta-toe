@@ -8,13 +8,17 @@ let sevens = document.getElementById("seven");
 let eights = document.getElementById("eight");
 let nines = document.getElementById("nine");
 
-const sto = ()=>{ 
-    var ayme = document.getElementById("myAduio")
-        ayme.pause();
-}
 const pla = ()=>{ 
     var ayme = document.getElementById("myAduio")
-    ayme.play();
+    var isPlaying = false;
+    if (isPlaying) {
+        ayme.pause();
+        ay.innerText = "play music";
+    }
+    else{
+        ayme.play();
+        ay.innerText = "pause music";
+    }
 }
 let ini = "X";
 const restarts = ()=>{
