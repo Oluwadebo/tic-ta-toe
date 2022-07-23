@@ -28,10 +28,7 @@ const empty=()=>{
     nines.innerHTML="";
 }
 const restarts = ()=>{
-    let anser = confirm('Are you sure u want to restart');
-    if (anser === true) {
-        location.reload();
-    }
+    location.reload();
 }
 
 const starts = ()=>{
@@ -43,7 +40,7 @@ const starts = ()=>{
         nam11.innerHTML = `${player1.value}`
         nam22.innerHTML = `${player2.value}`
     }else{
-        alert("Please provide your name")
+        ready.innerHTML = "Please provide your name player"
     }
 }
 
@@ -68,33 +65,42 @@ const sa = (e)=>{
         let h = sevens.innerHTML;
         let i = eights.innerHTML;
         let j = nines.innerHTML;
+      
         // check winning
         if ((a == "X" && b == "X" && c == "X") || (d == "X" && f == "X" && g == "X") || (h == "X" && i == "X" && j == "X") || (a == "X" && d == "X" && h == "X") || (b == "X" && f == "X" && i == "X") || (c == "X" && g == "X" && j == "X") || (a == "X" && f == "X" && j == "X") || (c == "X" && f == "X" && h == "X")) {
           setTimeout(()=>{
-            alert(`${player1.value} win this round`)
+            var ayme = document.getElementById("myAudio2");
+            ayme.play();
+            document.getElementById('clickMe').click();
+            playr11.innerHTML = `${player1.value} win this round. <br> Please click on NEXT ROUND to continue playing`;
             empty();
             ini = "";
             s1 = s1+1;
             scor1.innerHTML=s1;
             scor11.innerHTML=s1;
             return;
-          },500)
+          },150)
         }else if ((a == "O" && b == "O" && c == "O") || (d == "O" && f == "O" && g == "O") || (h == "O" && i == "O" && j == "O") || (a == "O" && d == "O" && h == "O") || (b == "O" && f == "O" && i == "O") || (c == "O" && g == "O" && j == "O") || (a == "O" && f == "O" && j == "O") || (c == "O" && f == "O" && h == "O")) {
             setTimeout(()=>{
-                alert(`${player2.value} win this round`)
+                var ayme = document.getElementById("myAudio2");
+                ayme.play();
+                document.getElementById('clickMe').click();
+                playr22.innerHTML = `${player2.value} win this round. <br> <div class="col-12 mx-auto card my-2">Please click on NEXT ROUND to continue playing</div>`;
                 empty();
                 ini = "";
                 d1 = d1+1;
                 scor2.innerHTML=d1;
                 scor22.innerHTML=d1;
                 return;
-            },500)
+            },150)
         }
     }else{
-        alert("Please provide your name")
+        ready.innerHTML = "Please provide your name player"
     }
 }
 const resect = ()=>{
+    var ayme = document.getElementById("myAudio2");
+    ayme.pause();
     ini = "X";
     ones.innerHTML = "";
     twos.innerHTML  = "";
@@ -105,4 +111,6 @@ const resect = ()=>{
     sevens.innerHTML  = "";
     eights.innerHTML  = "";
     nines.innerHTML  = "";
+    playr11.innerHTML = "";
+    playr22.innerHTML = "";
 }
